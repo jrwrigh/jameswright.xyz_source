@@ -15,7 +15,7 @@ jobs:
       uses: actions/checkout@v1
     
     - name: Hugo Deploy GitHub Pages
-      uses: jrwrigh/hugo-deploy-gh-pages
+      uses: jrwrigh/hugo-deploy-gh-pages@master
       env:
         HUGO_VERSION: 0.59.1
         TARGET_REPO: jrwrigh/jrwrigh.github.io

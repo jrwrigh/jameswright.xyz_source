@@ -1,0 +1,22 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: 
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout master 
+      uses: actions/checkout@v1
+    
+    - name: Hugo Deploy GitHub Pages
+      uses: benmatselby/hugo-deploy-gh-pages@1.1.0
+      env:
+        HUGO_VERSION: 0.59.1
+        TARGET_REPO: jrwrigh/jrwrigh.github.io
+        TOKEN: ${{ secrets.TOKEN }}

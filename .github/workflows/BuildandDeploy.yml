@@ -11,12 +11,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout master 
-      uses: actions/checkout@v1
-    
-    - name: Hugo Deploy GitHub Pages
-      uses: benmatselby/hugo-deploy-gh-pages@1.1.0
-      env:
-        HUGO_VERSION: 0.59.1
-        TARGET_REPO: jrwrigh/jrwrigh.github.io
-        TOKEN: ${{ secrets.TOKEN }}
+      - uses: actions/checkout@master
+        with:
+          submodules: true
+
+      - uses: jsumners/gh-action-hugo-deploy@v1.0.0
+        with:
+          destination_repo: jrwrigh/jrwrigh.github.io
+          destination_token: ${{ secrets.TOKEN }}

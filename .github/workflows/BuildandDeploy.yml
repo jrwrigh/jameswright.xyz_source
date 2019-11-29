@@ -20,3 +20,4 @@ jobs:
         HUGO_VERSION: 0.59.1
         TARGET_REPO: jrwrigh/jrwrigh.github.io
         TOKEN: ${{ secrets.TOKEN }}
+        CNAME: www.jameswright.xyz

@@ -7032,13 +7032,13 @@ a.text-dark:hover, a.text-dark:focus {
  **************************************************/
 html {
   font-family: B612 Mono, sans-serif;
-  font-size: 16.17px;
+  font-size: 13.86px;
   color: rgba(0, 0, 0, 0.8);
   line-height: 1.65; }
 
 @media screen and (min-width: 58em) {
   html {
-    font-size: 21px; } }
+    font-size: 18px; } }
 
 body {
   font-family: inherit;
@@ -7079,6 +7079,9 @@ ul, ol, dl {
 
 ul.task-list {
   list-style: none; }
+
+ul.task-list li input[type="checkbox"] {
+  margin-right: 0.5rem; }
 
 /* Navigation bar text */
 .navbar-light {
@@ -7532,12 +7535,15 @@ div.alert a {
   height: 70px;
   background: #212529;
   box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.11);
-  font-size: 16.17px;
+  font-size: 13.86px;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
-  z-index: 1030; }
+  z-index: 1030;
+  padding: 0 1rem; }
+  .navbar .nav-item {
+    position: relative; }
   @media (max-width: 991.98px) {
     .navbar {
       height: 50px; }
@@ -7558,7 +7564,7 @@ div.alert a {
         font-weight: bold !important;
         color: white !important; }
   .navbar .dropdown-menu {
-    font-size: 16.17px; }
+    font-size: 13.86px; }
   .navbar .dropdown-item.active,
   .navbar .i18n-active {
     font-weight: bold;
@@ -7568,7 +7574,9 @@ div.alert a {
   box-shadow: 0 0.125rem 0.25rem 0 rgba(255, 255, 255, 0.11); }
 
 .navbar-toggler {
-  border: 0 !important; }
+  border: 0 !important;
+  position: relative;
+  z-index: 1030; }
 
 .navbar-toggler:focus,
 .navbar-toggler:active {
@@ -7592,9 +7600,11 @@ div.alert a {
 }
 */
 .navbar-brand {
-  padding-top: 0;
-  padding-bottom: 0;
-  font-weight: bold; }
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  position: relative;
+  z-index: 1030; }
 
 .navbar-brand img {
   width: auto;
@@ -7602,26 +7612,28 @@ div.alert a {
   height: -webkit-fill-available;
   height: -webkit-stretch;
   height: stretch;
+  max-height: 60px;
   max-width: fit-content; }
 
 #navbar-main .main-menu-item ul li .nav-link {
   color: #0088cc; }
 
 @media (max-width: 991.98px) {
-  .navbar-brand {
-    max-width: fit-content;
-    margin: 0 auto;
+  .navbar-brand-mobile-wrapper {
     position: absolute;
     left: 0;
-    right: 0;
-    display: inline-block; }
+    right: 0; }
+  .navbar-brand {
+    margin: 0 auto; }
+  .navbar-brand img {
+    max-height: 40px; }
   .navbar-toggler {
     border-color: transparent; }
   #navbar-main .main-menu-item {
     text-align: left !important;
     padding-left: 0; }
   .navbar-collapse {
-    z-index: 9999 !important;
+    z-index: 1031 !important;
     position: absolute;
     left: 0;
     top: 50px;
@@ -7651,7 +7663,8 @@ ul.nav-icons li.nav-item a.nav-link {
 
 .dropdown-menu {
   background-color: #212529 !important;
-  color: #0088cc !important; }
+  color: #0088cc !important;
+  z-index: 1032; }
 
 .dropdown-item {
   background-color: #212529 !important;
@@ -8099,12 +8112,9 @@ ul.share li:hover i {
 /*************************************************
  *  Author profile card
  **************************************************/
-.author-card .portrait {
+.author-card .avatar {
   width: 60px;
-  height: 60px;
-  margin: 0 auto;
-  border-radius: 50%;
-  object-fit: cover; }
+  height: 60px; }
 
 .author-card .card-title {
   margin-top: 0;
@@ -8424,12 +8434,22 @@ a.hero-cta-alt:hover {
   padding: 30px 10px;
   position: relative; }
 
-.portrait {
-  width: 200px;
-  height: 200px;
+.avatar {
+  width: 270px;
+  height: 270px;
   margin: 0 auto;
-  border-radius: 50%;
   object-fit: cover; }
+
+@media (max-width: 767.98px) {
+  .wg-about .avatar {
+    width: 200px;
+    height: 200px; } }
+
+.avatar-circle {
+  border-radius: 50%; }
+
+.avatar-square {
+  border-radius: 3px; }
 
 .portrait-title h2 {
   font-size: 1.75em;
@@ -8623,7 +8643,7 @@ ul.ul-edu li .description p.institution {
 .people-widget .portrait-title h3 {
   font-size: 0.7rem; }
 
-.people-widget .portrait {
+.people-widget .avatar {
   width: 80%;
   max-width: 150px;
   height: auto; }
@@ -8835,7 +8855,7 @@ ul.toc-top {
   padding-left: 0; }
 
 #TableOfContents ul ul {
-  display: none; }
+  padding-left: 0.8rem; }
 
 #TableOfContents li {
   display: block; }

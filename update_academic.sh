@@ -34,6 +34,14 @@ function do_update () {
     sed -i.bak -e "s/HUGO_VERSION = .*/HUGO_VERSION = \"$version\"/g" ./netlify.toml && rm -f ./netlify.toml.bak
   fi
 
+  if [ -f ./.github/workflows/BuildandDeploy.yml ]; then
+    # Postfix '.0' to Hugo min_version as sadly it doesn't map to a precise semantic version.
+    version=$(sed -n 's/^min_version = //p' themes/academic/theme.toml | tr -d '"')
+    version="${version}.0"
+    echo "Set BuildandDeploy.yml Hugo version to v${version}"
+    sed -i.bak -e "s/HUGO_VERSION: .*/HUGO_VERSION: $version/g" ./.github/workflows/BuildandDeploy.yml && rm -f ./.github/workflows/BuildandDeploy.yml.bak
+  fi
+
   echo
   echo "View the release notes at: https://sourcethemes.com/academic/updates"
   echo "If there are breaking changes, the config and/or front matter of content" \

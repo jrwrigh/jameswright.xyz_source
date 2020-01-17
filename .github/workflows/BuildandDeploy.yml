@@ -2,7 +2,7 @@ name: Build and Deploy
 
 on:
   push:
-    branches: 
+    branches:
       - master
 
 jobs:
@@ -11,15 +11,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout master 
+    - name: Checkout master
       uses: actions/checkout@v1
       with:
         submodules: true
-    
+
     - name: Hugo Deploy GitHub Pages
       uses: benmatselby/hugo-deploy-gh-pages@master
       env:
-        HUGO_VERSION: 0.62.0
+        HUGO_VERSION: 0.62.2
         TARGET_REPO: jrwrigh/jrwrigh.github.io
         TOKEN: ${{ secrets.TOKEN }}
         CNAME: www.jameswright.xyz

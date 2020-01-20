@@ -2,7 +2,7 @@
 title: "Hybrid Turbulence Model Computations of the NASA Juncture Flow Model Using PHASTA"
 date: 2020-01-01
 publishDate: 2020-01-16T22:10:33.314016Z
-authors: ["Riccardo Balin", "James Wright", "John Patterson", "John A. Farnsworth", "John A. Evans", "Raj Lakhani", "Philippe Spalart", "Kenneth E. Jansen"]
+authors: ["Riccardo Balin", "James Wright", "John Patterson", "John A Farnsworth", "John A Evans", "Raj Lakhani", "Philippe Spalart", "Kenneth E Jansen"]
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;

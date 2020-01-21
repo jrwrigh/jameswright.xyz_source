@@ -73,9 +73,9 @@ subtitle = ""
  
  # CSS class.
  css_class = ""
-# [![jrwrigh/csv2cash - GitHub](https://gh-card.dev/repos/jrwrigh/csv2cash.svg)](https://github.com/jrwrigh/csv2cash)
 +++
 
-<div class="github-card" data-github="jrwrigh/csv2cash" data-width="400" data-height="153" data-theme="default"></div>
-<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-
+[![jrwrigh/csv2cash - GitHub](https://gh-card.dev/repos/jrwrigh/csv2cash.svg?fullname=)](https://github.com/jrwrigh/csv2cash)
+[![jrwrigh/ansys_cfx - GitHub](https://gh-card.dev/repos/jrwrigh/ansys_cfx.svg?fullname=)](https://github.com/jrwrigh/ansys_cfx)
+[![jrwrigh/fluent_colormaps - GitHub](https://gh-card.dev/repos/jrwrigh/fluent_colormaps.svg?fullname=)](https://github.com/jrwrigh/fluent_colormaps)
+[![jrwrigh/cfdpost_colormaps - GitHub](https://gh-card.dev/repos/jrwrigh/cfdpost_colormaps.svg?fullname=)](https://github.com/jrwrigh/cfdpost_colormaps)

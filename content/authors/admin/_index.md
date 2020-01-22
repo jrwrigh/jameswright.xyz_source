@@ -19,13 +19,12 @@ organizations:
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
-bio: I'm interested in CFD, turbulence modeling, motorsport, and disc golf.
+bio: I'm interested in CFD, turbulence modeling, motorsports, and disc golf.
 
 interests:
-- Computational Fluid Dynamics (CFD)
+- Computational Fluid Dynamics
 - Turbulence Modeling
 - Vehicle Aerodyanmics
-- Motorsports
 
 education:
   courses:
@@ -76,7 +75,7 @@ user_groups:
 ---
 
 I'm a PhD student studying aerospace engineering at the University of Colorado
-Boulder. My research is in simulating fluid flows, known as computational fluid
-dynamics (CFD). Specifically, I research improving hybrid turbulence models.
+Boulder. My research interests are in computational fluid dynamics, hybrid
+turbulence models, and vehicle aerodynamics.
 
-I'm also interesetd in motorsports, vehicle aerodynamics, and disc golf.
+I'm also interested in motorsports and disc golf.

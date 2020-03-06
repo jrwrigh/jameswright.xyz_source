@@ -13,7 +13,22 @@ baseurl = "https://www.jameswright.xyz/"
 
 # Enter a copyright notice to display in the site footer.
 # To display a copyright symbol, type `&copy;`. For current year, type `{year}`.
-copyright = "&copy; {year} James Wright"
+# copyright = "&copy; {year} James Wright"
+
+copyright = """
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+<img style="display:block;margin: 0 auto" class="display-centered" alt="Creative Commons License"
+src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
+</a>
+<br />
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">
+This work</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="/" property="cc:attributionName"
+rel="cc:attributionURL">James Wright</a> is licensed under a <a rel="license"
+href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
+International License</a>.<br />
+Permissions beyond the scope of this license may be available at <a
+xmlns:cc="http://creativecommons.org/ns#" href="https://jameswright.xyz"
+rel="cc:morePermissions">https://jameswright.xyz</a>."""
 
 ############################
 ## Advanced options below ##

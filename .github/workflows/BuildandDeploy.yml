@@ -19,7 +19,7 @@ jobs:
     - name: Hugo Deploy GitHub Pages
       uses: benmatselby/hugo-deploy-gh-pages@master
       env:
-        HUGO_VERSION: 0.62.0
+        HUGO_VERSION: 0.68.3
         TARGET_REPO: jrwrigh/jrwrigh.github.io
         TOKEN: ${{ secrets.TOKEN }}
         CNAME: www.jameswright.xyz

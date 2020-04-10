@@ -23,7 +23,8 @@ knowledge.
 ### So why do I use cookies?
 
 I use Google Analytics on this site so that I can keep count of how many people
-view the site and how popular specific pages are.
+view the site and how popular specific pages are. Google Analytics does _not_
+track your browsing history outside of this website.
 
 To do this, Google uses cookies. Via Hugo settings (from which this website is
 built), I've:

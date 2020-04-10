@@ -20,7 +20,7 @@ imaginable. I find it a miracle it actually works.
 Thus, all things below should be interpreted as being to the best of my
 knowledge.
 
-### So why do you use cookies?
+### So why do I use cookies?
 
 I use Google Analytics on this site so that I can keep count of how many people
 view the site and how popular specific pages are.

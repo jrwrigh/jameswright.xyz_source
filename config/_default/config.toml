@@ -38,7 +38,7 @@ rel="cc:morePermissions">james@jameswright.xyz</a>."""
 theme = "academic"
 
 # Get last modified date for content from Git?
-enableGitInfo = false
+enableGitInfo = true
 
 # Default language to use (if you setup multilingual support)
 defaultContentLanguage = "en"
@@ -84,3 +84,9 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   category = "categories"
   publication_type = "publication_types"
   author = "authors"
+
+[privacy.googleAnalytics]
+	anonymizeIP = true
+	disable = false
+	respectDoNotTrack = true
+	useSessionStorage = false

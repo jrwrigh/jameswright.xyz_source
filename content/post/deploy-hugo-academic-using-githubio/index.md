@@ -279,9 +279,10 @@ Once you hit generate, keep an eye on the alphanumeric string that is
 displayed. That's the PAT.
 ![Copy Token](./copy-token.png)
 
-Copy this string somewhere safe for right now. Once this process is setup up,
-I'd recommend you ***don't*** store the key anywhere. If you end up needing it
-later, it's easy to create a new one.
+Copy this string somewhere safe for right now. Once the PAT is put into a
+secret and you've verified that everything works, I'd recommend you ***don't***
+store the key anywhere. If for whatever reason you end up needing a PAT later,
+it's easy to create a new one.
 
 ### Create Secret in Source Repository
 

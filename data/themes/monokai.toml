@@ -13,10 +13,10 @@ primary = "#A6E22D"
 
 # Menu
 menu_primary = "#272822"
-menu_text = "#575b61"
+menu_text = "#d8d8d3"
 # menu_text_active = "#E8E8E3"
-menu_text_active = "#66d9ef"
-# menu_text_active = "#A6E22D"
+# menu_text_active = "#66d9ef"
+menu_text_active = "#A6E22D"
 # menu_title = "#E8E8E3"
 menu_title = "#E8E8E3"
 
@@ -26,3 +26,6 @@ home_section_odd = "#3f4145"
 home_section_even = "#575b61"
 
 font = "rose"
+
+font_size = 14
+font_size_small = 14

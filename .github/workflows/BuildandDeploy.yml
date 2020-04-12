@@ -23,4 +23,4 @@ jobs:
         TARGET_REPO: jrwrigh/jrwrigh.github.io
         TOKEN: ${{ secrets.TOKEN }}
         CNAME: www.jameswright.xyz
-        HUGO_ENV: production
+        # HUGO_ENV: production

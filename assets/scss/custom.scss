@@ -35,5 +35,16 @@ code{
 }
 
 // From https://discourse.gohugo.io/t/adding-anchor-next-to-headers/1726/14
-.hanchor { font-size: 100%; visibility: hidden; color:#E8E8E3;}
-h1:hover a, h2:hover a, h3:hover a, h4:hover a, h5:hover a { visibility: visible}
+.hanchor {
+  font-size: 100%;
+  visibility: hidden;
+  color:#E8E8E3;
+}
+
+h1:hover a,
+h2:hover a,
+h3:hover a,
+h4:hover a,
+h5:hover a {
+  visibility: visible;
+}

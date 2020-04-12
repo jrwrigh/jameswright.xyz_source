@@ -135,8 +135,6 @@ jobs:
         TARGET_REPO: jrwrigh/jrwrigh.github.io
         TOKEN: ${{ secrets.TOKEN }}
         CNAME: www.jameswright.xyz
-        HUGO_ENV: production
-
 ```
 
 I'll go over the different parts, but you can find more details about GitHub
@@ -216,7 +214,6 @@ wouldn't be able to build the site.
         TARGET_REPO: jrwrigh/jrwrigh.github.io
         TOKEN: ${{ secrets.TOKEN }}
         CNAME: www.jameswright.xyz
-        HUGO_ENV: production
 ```
 
 And here is where the magic happens. To actually deploy the Hugo site to the
@@ -247,9 +244,6 @@ variables (hence the `env:`). In detail, the options are:
     * The `CNAME` file is used if you setup a custom domain name for your website.
     * See [GitHub documentation](https://help.github.com/en/github/working-with-github-pages/configuring-a-custom-domain-for-your-github-pages-site)
     for more info on custom domain names for GitHub Pages.
-5. `HUGO_ENV`
-    * This environment variable is not used by the GitHub Action itself, but is
-      used by Hugo during the building process.
 
 ## Secret Token Setup
 

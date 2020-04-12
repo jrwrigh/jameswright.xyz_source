@@ -9149,3 +9149,11 @@ code {
   color: #fff5f7;
   background-color: #cd09302b;
   border-color: #ff3860; }
+
+.hanchor {
+  font-size: 100%;
+  visibility: hidden;
+  color: #E8E8E3; }
+
+h1:hover a, h2:hover a, h3:hover a, h4:hover a, h5:hover a {
+  visibility: visible; }

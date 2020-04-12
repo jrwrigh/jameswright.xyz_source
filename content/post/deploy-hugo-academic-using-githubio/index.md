@@ -1,4 +1,5 @@
 ---
+# vim: set commentstring=#%s:
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Deploy Hugo Academic Website using GitHub Pages"

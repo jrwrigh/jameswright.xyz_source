@@ -2,10 +2,10 @@
 # vim: set commentstring=#%s:
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Deploy Hugo Academic Website using GitHub Pages"
+title: "Automate Deployment of Hugo Academic Website onto GitHub Pages"
 subtitle: ""
 summary: "This tutorial goes over how to take a website built using Hugo Academic and
-host that website using a GitHub Pages website. More specifically, it goes over how to
+host that website using GitHub Pages. More specifically, it goes over how to
 automate the deployment of a Hugo site using GitHub Actions. This website you're viewing
 right now is run using this exact process."
 authors: ["admin"]
@@ -75,9 +75,9 @@ Pages is that:
 
  1. It is free
  2. You can setup a custom domain name with it easily
- 3. It integrates well automated deployment
+ 3. It integrates well with automated deployment
 
-By default, GH Pages will suggest you use Jekyll for creating the website.  I
+By default, GH Pages will suggest you use Jekyll for creating the website. I
 have nothing against using Jekyll to build a website, but the Hugo Academic
 theme is great for, well, academics and researchers.
 

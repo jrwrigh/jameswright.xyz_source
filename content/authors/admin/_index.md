@@ -36,7 +36,7 @@ education:
     year: 2019
   - course: BSc in Mechanical Engineering
     institution: Clemson University
-    year: 2014
+    year: 2018
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons

@@ -65,7 +65,7 @@ The script does the following:
  8. Copies all the data back
 
 
-```bash
+```bash {linenos=table}
 #!/bin/bash
 #PBS -N p136L0260_S050_SST
 #PBS -l select=1:ncpus=28:mpiprocs=28:mem=32gb
@@ -262,7 +262,7 @@ done
 
 ## PBS Frontmatter and System-Specific Software Setup
 
-```bash
+```bash {linenos=table, linenostart=1}
 #!/bin/bash
 #PBS -N p136L0260_S050_SST
 #PBS -l select=1:ncpus=28:mpiprocs=28:mem=32gb
@@ -293,7 +293,7 @@ how to setup batch simulations. Even if you're computing system uses PBS or
 require different options to run.
 
 ## Setup Useful Debugging Things
-```bash
+```bash {linenos=table,linenostart=13}
 set -o xtrace
 
 echo ""
@@ -363,7 +363,7 @@ This includes paths to required files, names for output files, options to be
 set in the Fluent journal file, and more external settings that Fluent
 requires.
 
-```bash
+```bash {linenos=table,linenostart=29}
 #####################################################################
 #                         Parameters
 
@@ -377,7 +377,7 @@ name of the data file that Fluent will output the results to. Note that the
 said, it can be a path, not just the name of a file. The `$dataFileName` acts
 as a prefix for the actual name of the data file that will be output.
 
-```bash
+```bash {linenos=table,linenostart=35}
 num_iterations=800
 
 SWITCH_ROTATIONAL_VELOCITY=false
@@ -393,7 +393,7 @@ later in the script that will add or remove chunks of Fluent journal script.
 Skip forward to **Somewhere else!!!!!** to get more detail on that process and
 to this other place for the journal file itself.
 
-```bash
+```bash {linenos=table,linenostart=41}
 # Fluent parameters
 mpi=intel # MPI options are [ibmmpi, intel, openmpi, cray]
 fluentType=3ddp
@@ -410,7 +410,7 @@ documentation for the available options
 Here, some of the outputs from PBS and user inputs are cleaned up such that
 they can easily be used by the rest of the script.
 
-```bash
+```bash {linenos=table,linenostart=45}
 #####################################################################
 #                     Name Wrangling
 
@@ -443,7 +443,7 @@ appended to it, so this is removed using `grep`. All `grep` does is return the
 any consecutive numbers longer than 3 digits. So we can turn
 `1234567.pbs1.palmetto.clemson.edu` into just `1234567`.
 
-```bash
+```bash {linenos=table,linenostart=52}
 caseFile="$(basename $casePath)"
 dataFileName=${jobid_num}_${dataFileName}
 outFilePath="$PBS_O_WORKDIR/${dataFileName}.log"
@@ -463,7 +463,7 @@ Lastly, the name of the journal file is set by the PBS job ID number.
 
 These lines of the script use the all caps parameters set in the [user inputs section](#user-parameters).
 
-```bash
+```bash {linenos=table,linenostart=58}
 #####################################################################
 #                     Fluent Journal File Logic
 

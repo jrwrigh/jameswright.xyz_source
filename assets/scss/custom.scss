@@ -34,6 +34,13 @@ code{
     border-color: #ff3860;
 }
 
+.dark .alert pre, .dark .article-style aside pre, .article-style .dark aside pre,
+.dark .alert code,
+.dark .article-style aside code,
+.article-style .dark aside code {
+  color: #8be9fd;
+  background-color: initial;
+  }
 // From https://discourse.gohugo.io/t/adding-anchor-next-to-headers/1726/14
 .hanchor {
   font-size: 100%;

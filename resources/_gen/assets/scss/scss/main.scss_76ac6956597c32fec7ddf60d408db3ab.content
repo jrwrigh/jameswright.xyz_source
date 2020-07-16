@@ -9150,6 +9150,13 @@ code {
   background-color: #cd09302b;
   border-color: #ff3860; }
 
+.dark .alert pre, .dark .article-style aside pre, .article-style .dark aside pre,
+.dark .alert code,
+.dark .article-style aside code,
+.article-style .dark aside code {
+  color: #8be9fd;
+  background-color: initial; }
+
 .hanchor {
   font-size: 100%;
   visibility: hidden;

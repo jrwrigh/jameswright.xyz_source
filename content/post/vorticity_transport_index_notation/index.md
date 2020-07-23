@@ -309,13 +309,13 @@ u_n $$
 
 $$ \Rightarrow \ ... + u_m  \partial_m u_i  - u_n  \partial_i u_n $$
 
-Change dummy indices in each term to match:
+Change dummy indices in each term to match (for aesthetics):
 
 $$ u_j \partial_j u_i = \tfrac{1}{2} \partial_i \(u_j u_j\) + u_j  \partial_j
 u_i  - u_j  \partial_i u_j $$
 
-Using product rule, we have $\partial_i \(u_j u_j\) = 2 u_j \partial_i u_j $.
-Substituting this in yields:
+Using product rule, we have $\partial_i \(u_j u_j\) = u_j \partial_i u_j + u_j
+\partial_i u_j = 2 u_j \partial_i u_j $.  Substituting this in yields:
 
 $$ u_j \partial_i u_j + u_j  \partial_j u_i  - u_j  \partial_i u_j $$
 
@@ -338,7 +338,7 @@ $$\varepsilon_{jik} \partial_j \partial_i u_k = - \varepsilon_{ijk} \partial_j
 \partial_i u_k $$
 
 Since all the indices are dummy indices, they maybe changed/switched
-arbitrarily let's switch $j$ and $i$:
+arbitrarily. Let's switch the $j$ and $i$ indices:
 
 $$\Rightarrow \ \varepsilon_{jik} \partial_j \partial_i u_k = -
 \varepsilon_{jik} \partial_i \partial_j u_k $$

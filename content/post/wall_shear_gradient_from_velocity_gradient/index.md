@@ -51,7 +51,7 @@ boundary layer flows. I'd submit that the "real" definition is dynamic
 viscosity ($\mu$) times the wall-normal gradient of velocity tangential to the
 wall taken at the wall, or:
 
-$$ \tau_w = \mu \left (\frac{\partial u_\perp}{\partial n}\right )
+$$ \tau_w = \mu \left (\frac{\partial u_\parallel}{\partial n}\right )
 \Bigg\rvert_{n=0} $$
 
 This will result in a vector parallel to the wall in the direction of the wall
@@ -85,8 +85,8 @@ summation notation.
 
 Obtain:
 
-$$ \left (\frac{\partial u_\perp}{\partial n}\right ) \Bigg\rvert_{n=0} =
-\left (\partial_{\hat n} u_\perp\right ) \big\rvert_{n=0} = 
+$$ \left (\frac{\partial u_\parallel}{\partial n}\right ) \Bigg\rvert_{n=0} =
+\left (\partial_{\hat n} u_\parallel\right ) \big\rvert_{n=0} = 
 f(E_{ij}, \hat n) = f(\partial_j u_i, \hat n)$$
 
 ## Derivation
@@ -114,14 +114,14 @@ over the $j$ index shows that this is true.
 Taking the vector projection formula from [Initial
 Definitions](#initial-definitions), this is fairly straight forward:
 
-$$ u_{i,\perp} = u_i - (u_k \hat n_k) \hat n_i$$
+$$ u_{i,\parallel} = u_i - (u_k \hat n_k) \hat n_i$$
 
 ### Combining Terms
 
 Putting these together, we get:
 
 $$\underbrace{\hat n_j \partial_j}\_{\partial_{\hat n}}
-[\underbrace{u_i - (u_k \hat n_k) \hat n_i }\_{u_{\perp}}]$$
+[\underbrace{u_i - (u_k \hat n_k) \hat n_i }\_{u_{\parallel}}]$$
 
 $$\Rightarrow \hat n_j \partial_j \left [u_k (\delta_{ik} - \hat n_k \hat n_i)
 \right]$$
@@ -161,16 +161,16 @@ $$ \therefore \text{RHT} = 0 $$
 
 Moving back to the original expression, we're then left with:
 
-$$ \partial_{\hat n} u_{i,\perp} =  (\delta_{ik} - \hat n_k \hat n_i)
+$$ \partial_{\hat n} u_{i,\parallel} =  (\delta_{ik} - \hat n_k \hat n_i)
 \hat n_j \partial_j (u_k) +
 \cancelto{0}{u_k \hat n_j \partial_j (\delta_{ik} - \hat n_k \hat n_i)}$$
 
 Note that we already have the gradient of velocity in the last term, thus:
 
-$$ \partial_{\hat n} u_{i,\perp} =  (\delta_{ik} - \hat n_k \hat n_i)
+$$ \partial_{\hat n} u_{i,\parallel} =  (\delta_{ik} - \hat n_k \hat n_i)
 \hat n_j E_{kj} $$
 
-$$ \therefore \left (\frac{\partial u_\perp}{\partial n}\right )
+$$ \therefore \left (\frac{\partial u_\parallel}{\partial n}\right )
 \Bigg\rvert_{n=0} = \bigg( \big[(\delta_{ik} - \hat n_k \hat n_i) \hat n_j
 \big] E_{kj} \bigg) \Bigg\rvert_{n=0} = f(\hat n, E_ij)$$
 

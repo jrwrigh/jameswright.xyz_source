@@ -62,7 +62,7 @@ I'll define the velocity gradient as a tensor $E_{ij}\ $:
 $$ E_{ij} = \frac{\partial u_i}{\partial x_j} = \partial_j u_i$$
 
 Note that $E\_{ij}$ is _not_ symmetric and that $\partial_j$ is still an
-with $u_i$ as it's input, not multiplication.
+operator with $u_i$ as it's input, not multiplication.
 
 Lastly, we have the common form of projecting a vector onto a plane given its
 normal vector:

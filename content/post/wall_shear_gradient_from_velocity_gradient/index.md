@@ -67,7 +67,7 @@ operator with $u_i$ as it's input, not multiplication.
 Lastly, we have the common form of projecting a vector onto a plane given its
 normal vector:
 
-$$ \text{proj}_{\hat n}(\overrightarrow{u}) = \overrightarrow{u} - 
+$$ \text{proj}_{\hat n}(\overrightarrow{u}) = \overrightarrow{u} -
 (\overrightarrow{u} \cdot \hat n) \hat n
 = u_i - (u_j \hat n_j) \hat n_i$$
 
@@ -86,15 +86,25 @@ summation notation.
 Obtain:
 
 $$ \left (\frac{\partial u_\parallel}{\partial n}\right ) \Bigg\rvert_{n=0} =
-\left (\partial_{\hat n} u_\parallel\right ) \big\rvert_{n=0} = 
+\left (\partial_{\hat n} u_\parallel\right ) \big\rvert_{n=0} =
 f(E_{ij}, \hat n) = f(\partial_j u_i, \hat n)$$
+
+## Solution
+
+For the impatient, the solution is:
+
+$$ \left (\frac{\partial u_\parallel}{\partial n}\right )
+\Bigg\rvert_{n=0} = \bigg( \big[(\delta_{ik} - \hat n_k \hat n_i) \hat n_j
+\big] E_{kj} \bigg) \Bigg\rvert_{n=0} = f(\hat n, E_{ij})$$
+
+The derivation of the above equation is given below.
 
 ## Derivation
 
-Notice that the wall shear gradient can be broken into two "terms": 
+Notice that the wall shear gradient can be broken into two "terms":
 
- - gradient in the wall-normal direction
- - velocity tangent to the wall
+- gradient in the wall-normal direction
+- velocity tangent to the wall
 
 First we'll define these two "terms" individually
 
@@ -172,7 +182,7 @@ $$ \partial_{\hat n} u_{i,\parallel} =  (\delta_{ik} - \hat n_k \hat n_i)
 
 $$ \therefore \left (\frac{\partial u_\parallel}{\partial n}\right )
 \Bigg\rvert_{n=0} = \bigg( \big[(\delta_{ik} - \hat n_k \hat n_i) \hat n_j
-\big] E_{kj} \bigg) \Bigg\rvert_{n=0} = f(\hat n, E_ij)$$
+\big] E_{kj} \bigg) \Bigg\rvert_{n=0} = f(\hat n, E_{ij})$$
 
 To obtain $\tau_w$, simply multiply by $\mu$:
 

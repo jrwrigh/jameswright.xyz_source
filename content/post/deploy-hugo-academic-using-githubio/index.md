@@ -2,14 +2,14 @@
 # vim: set commentstring=#%s:
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Automate Deployment of Hugo Academic Website onto GitHub Pages"
+title: "Automate Deployment of Wowchemy Website onto GitHub Pages"
 subtitle: ""
-summary: "This tutorial goes over how to take a website built using Hugo Academic and
+summary: "This tutorial goes over how to take a website built using Hugo Wowchemy (formerly Academic) and
 host that website using GitHub Pages. More specifically, it goes over how to
 automate the deployment of a Hugo site using GitHub Actions. This website you're viewing
 right now is run using this exact process."
 authors: ["admin"]
-tags: ["Hugo Academic", "GitHub Pages", "GitHub Actions", "CI/CD"]
+tags: ["Hugo Academic", "GitHub Pages", "GitHub Actions", "CI/CD", "Hugo Wowchemy"]
 categories: ["Tutorials"]
 date: 2020-04-09T20:04:51-06:00
 lastmod: 2020-04-09T20:04:51-06:00
@@ -35,15 +35,20 @@ projects: []
 highlight_languages: ["go", "clojure", "yaml"]
 ---
 
+{{% alert note %}}
+Hugo Academic theme has now changed it's name to Wowchemy.  I've updated the
+names and links in the post to reflect the change.
+{{% /alert %}}
+
 {{% alert warning %}}
 This tutorial will assume that
 
-1. You have a repository containing the Hugo Academic source code
+1. You have a repository containing the Wowchemy source code
 2. You have a GitHub Pages repository
 3. You have a general grasp of GitHub and git concepts (repos, pushing, etc.)
 
-Resources for creating your Hugo Academic website can be found at the [Hugo
-Academic website](https://sourcethemes.com/academic/docs/install/). For
+Resources for creating your Wowchemy website can be found at the [Hugo
+Wowchemy website](https://wowchemy.com/docs/). For
 setting up your own (free) GitHub Pages repository, see the [GitHub Pages
 Website](https://pages.github.com/). If you have neither of these pre-requisites
 done, go get them done and come back here.  Don't worry, I can wait. :wink:
@@ -68,7 +73,7 @@ I talk about two primary repositories in this tutorial: a "Source" repo and a
 
 ## Overview
 
-This tutorial goes over how to take a website built using Hugo Academic and
+This tutorial goes over how to take a website built using Wowchemy and
 host that website using a GitHub Pages website. This website you're viewing
 right now is run using this exact process. The beauty of hosting it on GitHub
 Pages is that:
@@ -78,7 +83,7 @@ Pages is that:
  3. It integrates well with automated deployment
 
 By default, GH Pages will suggest you use Jekyll for creating the website. I
-have nothing against using Jekyll to build a website, but the Hugo Academic
+have nothing against using Jekyll to build a website, but the Wowchemy
 theme is great for, well, academics and researchers.
 
 The way GitHub Pages sites work is that, assuming Jekyll files are not present,
@@ -201,7 +206,7 @@ ones if they're in a public repository).
 This simply clones (or checkout in GitHub's nomenclature) the Source repository
 to the container. It is one of GitHub's default actions.
 
-**Note:** The `submodules: true` is quite important, as the Hugo Academic theme
+**Note:** The `submodules: true` is quite important, as the Wowchemy theme
 runs as a submodule in your Source repository. If that wasn't set, Hugo
 wouldn't be able to build the site.
 

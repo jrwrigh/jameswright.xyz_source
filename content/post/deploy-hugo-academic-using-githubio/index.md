@@ -4,12 +4,12 @@
 
 title: "Automate Deployment of Wowchemy Website onto GitHub Pages"
 subtitle: ""
-summary: "This tutorial goes over how to take a website built using Hugo Wowchemy (formerly Academic) and
+summary: "This tutorial goes over how to take a website built using Hugo and Wowchemy (formerly Academic) and
 host that website using GitHub Pages. More specifically, it goes over how to
 automate the deployment of a Hugo site using GitHub Actions. This website you're viewing
 right now is run using this exact process."
 authors: ["admin"]
-tags: ["Hugo Academic", "GitHub Pages", "GitHub Actions", "CI/CD", "Hugo Wowchemy"]
+tags: ["Hugo Academic", "GitHub Pages", "GitHub Actions", "CI/CD", "Hugo", "Wowchemy"]
 categories: ["Tutorials"]
 date: 2020-04-09T20:04:51-06:00
 lastmod: 2020-04-09T20:04:51-06:00
@@ -47,11 +47,11 @@ This tutorial will assume that
 2. You have a GitHub Pages repository
 3. You have a general grasp of GitHub and git concepts (repos, pushing, etc.)
 
-Resources for creating your Wowchemy website can be found at the [Hugo
-Wowchemy website](https://wowchemy.com/docs/). For
-setting up your own (free) GitHub Pages repository, see the [GitHub Pages
-Website](https://pages.github.com/). If you have neither of these pre-requisites
-done, go get them done and come back here.  Don't worry, I can wait. :wink:
+Resources for creating your Wowchemy website can be found at the [Wowchemy
+website](https://wowchemy.com/docs/). For setting up your own (free) GitHub
+Pages repository, see the [GitHub Pages Website](https://pages.github.com/). If
+you have neither of these pre-requisites done, go get them done and come back
+here.  Don't worry, I can wait. :wink: 
 {{% /alert %}}
 
 ## tl;dr

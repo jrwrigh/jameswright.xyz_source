@@ -22,6 +22,6 @@ tags: ["Hybrid Turbulence Models", "PHASTA", "NASA Wing Juncture"]
 
 url_pdf: "https://www.researchgate.net/publication/338396759_Hybrid_Turbulence_Model_Computations_of_the_NASA_Juncture_Flow_Model_Using_PHASTA"
 
-doi: "10.2514/6.2020-1777"
+doi: "10/ght3dv"
 ---
 

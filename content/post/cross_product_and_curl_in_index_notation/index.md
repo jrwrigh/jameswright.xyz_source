@@ -128,13 +128,13 @@ b_k $$
 where $\partial_i$ is the differential operator $\frac{\partial}{\partial
 x_i}$.
 
-{{% alert warning %}}
+{{% callout warning %}}
 
 Note that $\partial_k$ is ***not*** commutative since it is an operator. It may be
 better to write $\partial_k u_i$ as $\partial_k \(u_i\)$ to more explicitly
 denote it's nature as an operator on $u_i$.
 
-{{% /alert %}}
+{{% /callout %}}
 
 These follow the same rules as with a normal cross product, but the
 first "vector" is always going to be the differential operator. Since $\nabla$

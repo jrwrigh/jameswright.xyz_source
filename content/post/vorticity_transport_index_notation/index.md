@@ -78,7 +78,7 @@ deltas](https://en.wikipedia.org/wiki/Kronecker_delta), $\delta_{ij}$:
 $$ \varepsilon_{ijk} \varepsilon_{imn} = \delta_{jm}\delta_{kn} -
 \delta_{jn}\delta_{km} $$
 
-{{% alert note %}}
+{{% callout note %}}
 
 Hint: To convert from some arbitrary pair of Levi-Civita symbols that share
 one index, first rearrange their indices such that the shared index is the
@@ -88,7 +88,7 @@ where $a_i$ and $b_i$ represent the indices of the different Levi-Civita
 symbols and their subscripts represent which index is placed in that Kronecker
 delta.
 
-{{% /alert %}}
+{{% /callout %}}
 
 Speaking of Kronecker deltas, they have the handy effect of changing indices:
 
@@ -98,9 +98,11 @@ Differential operators are order invariant:
 
 $$ \partial_i \(\partial_j \(u_k\)\)  = \partial_j \(\partial_i \(u_k\)\)$$
 
-{{% alert warning %}} I will be dropping the use of parentheses for the
+{{% callout warning %}} 
+I will be dropping the use of parentheses for the
 differential operator, but note that it *is* an operator and is not
-commutative: $\partial_i u_j \neq u_j \partial_i$ {{% /alert %}}
+commutative: $\partial_i u_j \neq u_j \partial_i$
+{{% /callout %}}
 
 With that taken care of, onto the derivation!
 

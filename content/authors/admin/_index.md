@@ -24,6 +24,7 @@ bio: I'm interested in CFD, turbulence modeling, motorsports, and disc golf.
 interests:
 - Computational Fluid Dynamics
 - Turbulence Modeling
+- Numerical Methods
 - Vehicle Aerodyanmics
 
 education:

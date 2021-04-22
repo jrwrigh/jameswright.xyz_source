@@ -25,7 +25,7 @@ interests:
 - Computational Fluid Dynamics
 - Turbulence Modeling
 - Numerical Methods
-- Vehicle Aerodyanmics
+- Vehicle Aerodynamics
 
 education:
   courses:

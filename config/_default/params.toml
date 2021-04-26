@@ -261,3 +261,11 @@ plugins_js  = []
 [marketing]
   google_analytics = "UA-162278003-2"
   google_tag_manager = ""
+
+############################
+## Wowchemy Changes
+############################
+
+# Icon Pack Extensions
+[icon.pack]
+  ai = true  # Enable the Academicons icon pack https://jpswalsh.github.io/academicons/

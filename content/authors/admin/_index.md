@@ -1,7 +1,7 @@
 ---
 # vim: set commentstring=#%s:
 # Display name
-name: James Wright
+title: James Wright
 
 # Username (this should match the folder name)
 authors:
@@ -76,6 +76,8 @@ email: ""
 user_groups:
 - Researchers
 - Visitors
+
+highlight_name: true
 ---
 
 I'm a PhD student studying aerospace engineering at the University of Colorado

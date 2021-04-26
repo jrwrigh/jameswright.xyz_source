@@ -35,12 +35,12 @@ projects: []
 highlight_languages: ["go", "clojure", "yaml"]
 ---
 
-{{% alert note %}}
+{{% callout note %}}
 Hugo Academic theme has now changed it's name to Wowchemy.  I've updated the
 names and links in the post to reflect the change.
-{{% /alert %}}
+{{% /callout %}}
 
-{{% alert warning %}}
+{{% callout warning %}}
 This tutorial will assume that
 
 1. You have a repository containing the Wowchemy source code
@@ -52,7 +52,7 @@ website](https://wowchemy.com/docs/). For setting up your own (free) GitHub
 Pages repository, see the [GitHub Pages Website](https://pages.github.com/). If
 you have neither of these pre-requisites done, go get them done and come back
 here.  Don't worry, I can wait. :wink: 
-{{% /alert %}}
+{{% /callout %}}
 
 ## tl;dr
 
@@ -63,13 +63,13 @@ here.  Don't worry, I can wait. :wink:
 5. Push Source repo (with the Workflow YAML file)
 6. Watch GitHub do all the work for you
 
-{{% alert note %}}
+{{% callout note %}}
 I talk about two primary repositories in this tutorial: a "Source" repo and a
 "Pages" repo.
 
 * **Source Repo**: Contains the Hugo source files (markdown, config, etc.)
 * **Pages Repo**: The directory from which a GitHub Pages website is deployed
-{{% /alert %}}
+{{% /callout %}}
 
 ## Overview
 

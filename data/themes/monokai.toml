@@ -9,7 +9,7 @@ light = false
 # primary = "#66d9ef"
 # primary = "#F92772"
 # primary = "#ae81ff"
-primary = "#A6E22D"
+primary = "#575b61"
 
 # Menu
 menu_primary = "#272822"
@@ -17,15 +17,37 @@ menu_text = "#d8d8d3"
 # menu_text_active = "#E8E8E3"
 # menu_text_active = "#66d9ef"
 menu_text_active = "#A6E22D"
-# menu_title = "#E8E8E3"
 menu_title = "#E8E8E3"
 
 # Backgrounds
 background = "#2D2E27"
 home_section_odd = "#3f4145"
 home_section_even = "#575b61"
+link="#F92772"
+link_hover="#A6E22D"
 
 font = "rose"
 
 font_size = 14
 font_size_small = 14
+
+[dark]
+  primary = "#A6E22D"
+
+  # Menu
+  menu_primary = "#272822"
+  menu_text = "#d8d8d3"
+  # menu_text_active = "#E8E8E3"
+  # menu_text_active = "#66d9ef"
+  menu_text_active = "#A6E22D"
+  menu_title = "#E8E8E3"
+
+  # Backgrounds
+  background = "#2D2E27"
+  home_section_odd = "#3f4145"
+  home_section_even = "#575b61"
+
+  link="#A6E22D"
+  link_hover="#A6E22D"
+
+

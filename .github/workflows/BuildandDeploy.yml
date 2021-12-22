@@ -25,3 +25,4 @@ jobs:
         TOKEN: ${{ secrets.TOKEN }}
         CNAME: www.jameswright.xyz
         HUGO_ARGS: --debug
+        GO_VERSION: 1.17

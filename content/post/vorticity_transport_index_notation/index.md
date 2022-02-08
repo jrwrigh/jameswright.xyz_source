@@ -27,6 +27,11 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
+
+aliases:
+  - /post/vorticity_transport_index_notation
+
+slug: vorticity_transport_index_notation
 ---
 
 ## Definitions and Useful Tools

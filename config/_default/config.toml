@@ -113,6 +113,9 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
     name = "authors"
     weight = 20.0
 
+[permalinks]
+  post = '/:section/:year:month:day/:slug'
+
 ############################
 ## Hugo Modules Setup
 ############################

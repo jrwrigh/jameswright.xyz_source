@@ -27,6 +27,11 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
+
+aliases:
+  - /post/cross_product_and_curl_in_index_notation
+
+slug: cross_product_and_curl_in_index_notation
 ---
 
 Here are some brief notes on performing a cross-product using index notation.

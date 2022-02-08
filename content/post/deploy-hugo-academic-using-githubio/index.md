@@ -33,6 +33,11 @@ image:
 projects: []
 ## Prerequisites
 highlight_languages: ["go", "clojure", "yaml"]
+
+aliases:
+  - /post/deploy-hugo-academic-using-githubio
+
+slug: deploy_wowchemy_to_githubio
 ---
 
 {{% callout note %}}

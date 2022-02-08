@@ -29,6 +29,11 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
+
+aliases:
+  - /post/wall_shear_gradient_from_velocity_gradient
+
+slug: calculate_wall_shear_from_velocity_gradient
 ---
 
 The gradient of velocity is generally easy to compute in most CFD

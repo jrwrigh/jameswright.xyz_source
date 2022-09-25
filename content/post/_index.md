@@ -11,4 +11,7 @@ view: 2
 header:
   caption: ""
   image: ""
+cascade:
+  commentable: true
+  show_related: true
 ---

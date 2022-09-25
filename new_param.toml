@@ -1,0 +1,109 @@
+[appearance]
+  theme_day = "monokai"
+  theme_night = "monokai"
+  font = "rose"
+  font_size = "M"
+
+[marketing.seo]
+site_type = "Person"
+local_business_type = ""
+org_name = ""
+description = ""
+twitter = ""
+
+[marketing.analytics]
+google_analytics = "UA-162278003-2"
+baidu_tongji = ""
+
+[marketing.verification]
+google = ""
+baidu = ""
+
+[header.navbar]
+enable = true
+align = "l"
+show_logo = true
+show_language = false
+show_day_night = false
+show_search = true
+highlight_active_link = true
+
+[footer.copyright]
+notice = """
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+<img style="display:block;margin: 0 auto" class="display-centered" alt="Creative Commons License"
+src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
+</a>
+<br />
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">
+This work</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="/" property="cc:attributionName"
+rel="cc:attributionURL">James Wright</a> is licensed under a <a rel="license"
+href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
+International License</a>.<br />
+Permissions beyond the scope of this license may be available at <a
+xmlns:cc="http://creativecommons.org/ns#" href="mailto:james@jameswright.xyz"
+rel="cc:morePermissions">james@jameswright.xyz</a>."""
+
+  [footer.copyright.license]
+  enable = false
+  allow_derivatives = false
+  share_alike = true
+  allow_commercial = false
+
+[locale]
+date_format = "Jan 2, 2006"
+time_format = "3:04 PM"
+address_format = "en-us"
+
+[features.syntax_highlighter]
+enable = true
+extra_languages = [ "r", "latex" ]
+
+[features.math]
+enable = true
+
+[features.privacy_pack]
+enable = true
+
+[features.repository]
+url = "https://github.com/jrwrigh/jameswright.xyz_source"
+content_dir = ""
+branch = "master"
+
+[features.avatar]
+gravatar = false
+shape = "square"
+
+[features.comment]
+provider = ""
+
+  [features.comment.disqus]
+  shortname = ""
+  show_count = true
+
+  [features.comment.commento]
+  url = ""
+
+[features.search]
+provider = "wowchemy"
+
+  [features.search.algolia]
+  app_id = ""
+  api_key = ""
+  index_name = ""
+  show_logo = false
+
+[features.map]
+provider = ""
+api_key = ""
+zoom = 15
+
+[extensions.cms]
+branch = "master"
+local_backend = false
+
+[extensions.isotope]
+enable = true
+
+[extensions.academicons]
+enable = true

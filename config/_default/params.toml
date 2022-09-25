@@ -76,7 +76,7 @@ gravatar = false
 shape = "square"
 
 [features.comment]
-provider = ""
+provider = "giscus"
 
   [features.comment.disqus]
   shortname = ""
@@ -84,6 +84,13 @@ provider = ""
 
   [features.comment.commento]
   url = ""
+
+  [features.comment.giscus]
+  repo = "jrwrigh/jameswright.xyz_source"
+  repo_id = "MDEwOlJlcG9zaXRvcnkyMjQ3MDg3OTY="
+  category= "Announcements"
+  category-id= "DIC_kwDODWTIvM4CRoHq"
+  theme= "dark_dimmed"
 
 [features.search]
 provider = "wowchemy"

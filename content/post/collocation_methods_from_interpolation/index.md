@@ -78,7 +78,7 @@ $$
 
 where the last two equations are our boundary conditions.
 
-### Defining the Solution Function
+## Defining the Solution Function
 Following the steps from interpolation, we need to assume a form for our function.
 We'll denote this function as $u^h$, which will be an approximate solution to the PDE.
 We assume the form:
@@ -90,36 +90,166 @@ The choice of $\phi_n(x)$ is left arbitrary for this article.
 A few options are [Legendre](https://mathworld.wolfram.com/LegendrePolynomial.html), [Laguerre](https://mathworld.wolfram.com/LaguerrePolynomial.html), and [Chebyshev](https://mathworld.wolfram.com/ChebyshevPolynomialoftheFirstKind.html) polynomials (which all have their own special properties, not discussed here),
 or non-polynomial basis functions, such as the [Fourier series](https://en.wikipedia.org/wiki/Fourier_series).
 
-## Generic PDE
-
-For a given PDE of the form:
-
-$$L(u) = f$$ 
-
-for $L$ the PDE operator, $u$ the state variable, and $f$ some source function, subject to boundary conditions:
+By defining $u=u^h$, we approximate the continuous PDE given above as:
 
 {{< math >}}
-$$ 
+$$
 \begin{align*}
-	u(0) &= a \\
-	u_{,x}(1) &= b
+    u''^{\,h}(x) &= f(x) \quad x \in [0,1] \\
+    u^h(0) &= 1 \\
+    u'^{\,h}(1) &= 2
 \end{align*}
 $$
 {{< /math >}}
 
-we approximate the solution as
 
-$$ u \approx \sum_{i=0}^N c_i \phi_i(x) = u^h$$
+## Defining the Constraints
 
-for $c_i$ coefficients, $\phi_i(x)$ basis functions, and $N$ the number of basis functions.
+Before we determine the number of DOFs, we need to know the number of constraints.
+I've already mentioned that the boundary conditions represent constraints, so there's 2 constraints right there.
 
-We choose to enforce that $L(u) = 0$ at a select number of locations in the domain, called **collocation points**: 
+But for "Satisfying the differential equation", the PDE is defined for the entire domain, not discrete locations.
+This is equivalent to defining an infinite number of constraints, one for for every possible location within the domain.
+This is obviously not feasible. 
+Therefore, **we choose a select number of points to enforce the PDE**.
+The points that we use are called **collocation points**.
 
-$$\{\xi^j\}_{j=1}^{n_c}$$
+Therefore, the total number of constraints are the number of boundary conditions plus the number of collocation points. 
+I'll denote these by $m_b$ and $m_c$.
 
-This forms a set of $n_c$ equations:
+{{< callout warning >}}
+$m \neq m_b + m_c$, but instead $m = m_b + m_c - 1$.
+{{< /callout >}}
 
-$$L(u^h(\xi^j)) = 0$$
+## Determining the Collocation Points
+
+We still need to determine how many collocation points and where on the domain they should be.
+This is a more nuanced discussion, so I've moved a more detailed discussion of it to [Appendix A](#appendix-a-determining-collocation-points-continued).
+
+For right now, we'll assume the number of collocation points is arbitrary and that the points are evenly distributed across the domain.
+We denote the set of collocation point locations as:
+
+{{< math >}}
+$$\left\{\xi_j \right\}_{j=1}^{m_ c}$$
+{{< /math >}}
+
+## Creating the System of Equations
+To create the system of equations, just like with interpolation, we simply express each constraint in terms of $u^h$ and expand the definition of it.
+So for our boundary conditions, we end up with:
+
+{{< math >}}
+$$
+\begin{align*}
+u^h(0) = 1 \quad &\Rightarrow \quad c_0 \phi_0(0) + c_1 \phi_1(0) + \dots + c_N \phi_N(0) = 1 \\
+u'^{\,h}(1) = 2 \quad &\Rightarrow \quad c_0 \phi_0'(1) + c_1 \phi_1'(1) + \dots + c_N \phi_N'(1) = 2
+\end{align*}
+$$
+{{< /math >}}
+
+The [slope constraints section of my interpolation theory post]({{< relref "post/interpolation-theory-101#slope-constraints" >}}) has a derivation for {{< math >}}$u'^{\, h}(x) = \sum_{n=0}^N c_n \phi_n'(x)${{< /math >}}.
+
+For the PDE itself, we just evaluate the PDE approximated with $u^h$ at the collocation points:
+
+{{< math >}}
+$$
+\begin{align*}
+u''^{\,h}(\xi_1) =  \quad &\Rightarrow \quad c_0 \phi_0''(\xi_1) + c_1 \phi_1''(\xi_1) + \dots + c_N \phi_N''(\xi_1) = f(\xi_1) \\
+u''^{\,h}(\xi_2) =  \quad &\Rightarrow \quad c_0 \phi_0''(\xi_2) + c_1 \phi_1''(\xi_2) + \dots + c_N \phi_N''(\xi_2) = f(\xi_2) \\
+\vdots \\
+u''^{\,h}(\xi_{m_c}) =  \quad &\Rightarrow \quad c_0 \phi_0''(\xi_{m_c}) + c_1 \phi_1''(\xi_{m_c}) + \dots + c_N \phi_N''(\xi_{m_c}) = f(\xi_{m_c}) \\
+\end{align*}
+$$
+{{< /math >}}
+
+The boundary condition and collocation contraint equations can then be combined into the same system of equations.
+This results in the following matrix form:
+
+{{< math >}}
+$$
+\begin{bmatrix}
+\phi_0(0) &  \phi_1(0) & \dots &  \phi_N(0) \\
+\phi_0'(1) &  \phi_1'(1) & \dots &  \phi_N'(1)  \\
+\phi_0''(\xi_1) &  \phi_1''(\xi_1) & \dots &  \phi_N''(\xi_1) \\
+\phi_0''(\xi_2) &  \phi_1''(\xi_2) & \dots &  \phi_N''(\xi_2) \\
+\vdots  & \vdots  & \ddots & \vdots  \\[8pt]
+\phi_0''(\xi_{m_c}) &  \phi_1''(\xi_{m_c}) & \dots &  \phi_N''(\xi_{m_c}) \\
+\end{bmatrix}
+
+\begin{bmatrix}
+c_1 \\
+c_2 \\
+c_3 \\
+c_4 \\
+\vdots  \\
+c_N \\
+\end{bmatrix}
+
+=
+\begin{bmatrix}
+1 \\
+2 \\
+f(\xi_1) \\
+f(\xi_2) \\
+\vdots  \\
+f(\xi_{m_c}) \\
+\end{bmatrix}
+$$
+{{< /math >}}
+
+And tada! You have the collocation method for the Poisson PDE.
+All you need to do is solve this matrix equation for the DOFs $c_n$ and then reconstruct $u^h$ to have your solution!
+
+## Generic Differential Equation
+Let's take what we got from the Poisson equation, and generalize it to any differential equation (DE).
+
+For a given DE, assume we can write it in the form:
+
+$$L(u) = f$$
+
+for $L$ the DE operator, $u$ the solution function, and $f$ some source function.
+For example, the Poisson PDE is given by $u''(x) = f$, therefore $L(u) = u''$.
+Another, more complicated example, would be the [Blasius Boundary layer equation](https://en.wikipedia.org/wiki/Blasius_boundary_layer#Blasius_equation_-_first-order_boundary_layer), which is given as $2u''' + u'' u = 0$.
+In this case, $L(u) = 2u''' + u'' u$.
+
+The DE is subject to boundary conditions (and/or initial conditions).
+We denote the number of boundary conditions to be $m_b$.
+We will consider two here, though many other are possible.
+
+{{< math >}}
+$$ 
+\begin{align*}
+	u'(1) &= a \\
+	u''(1) &= b
+\end{align*}
+$$
+{{< /math >}}
+
+### Setting Up Collocation
+Next, we approximate the solution $u$ as
+
+$$ u \approx \sum_{n=0}^N c_n \phi_n(x) = u^h$$
+
+for $c_n$ coefficients, $\phi_n(x)$ basis functions, and $N$ the number of basis functions.
+We'll discuss the value of $N$ a bit later.
+
+We choose to enforce that $L(u) = f$ at a select number of locations in the domain, called **collocation points**: 
+
+{{< math >}}
+$$\{\xi_j\}_{j=1}^{m_ c}$$
+{{< /math >}}
+
+This forms a set of $m_c$ equations:
+
+{{< math >}}
+$$
+\begin{align*}
+L(u^h(\xi_1)) &= f(\xi_1) \\
+L(u^h(\xi_2)) &= f(\xi_2) \\
+\vdots  \\
+L(u^h(\xi_{m_c})) &= f(\xi_{m_c}) \\
+\end{align*}
+$$
+{{< /math >}}
 
 However, we also need to enforce the boundary conditions. These form another set of equations to solve:
 
@@ -127,12 +257,17 @@ However, we also need to enforce the boundary conditions. These form another set
 $$ 
 \begin{align*}
 	u^h(0) &= a \\
-	u^h_{,x}(1) &= b
+	u'^{\,h}(1) &= b
 \end{align*}
  $$
 {{< /math >}}
  
-Since we have $n_c + 2$ equations, we *must* have $n_c + 2$ unknowns, $c_i$. Therefore $N = n_c +2$.
+To ensure existence and uniqueness of our solution $u^h$, we prescribe that the number of DOFs equals the number of constraints.
+In other words, $N = m_c + m_b -1$.
+The logic for this choice falls directly from the discussion in [Interpolation Theory 101]({{< relref "post/interpolation-theory-101#polynomial-order" >}}).
+An alternative way of thinking about it is that our boundary conditions and collocation points setup $m_c + m_b$ equations.
+To find a solution, we must have the number of unknowns match the number of equations.
+Since the number of unknowns is $N+1$, then $N = m_c + m_b -1$.
 
 ### Matrix Form
 If $L$ is linear, we can express this as a $N\times N$ matrix $A$, and vectors $c,b \in \mathbb{L}^N$:
@@ -201,4 +336,32 @@ The quick summary of collocation methods is that we assume some continuous, fini
 The number of constraints is equal to the number of collocation points + the total number of boundary conditions.
 
 In the case of vector PDEs, the number (and location) of the collocation points must be the same, but their boundary condition count may be different. Thus, the dimensionality of the solution for each vector component maybe different.
+
+
+## Appendix A: Determining Collocation Points Continued
+
+Note we have yet to determine the number of collocation points nor the location of the collocation points.
+
+### How many?
+Choosing the number of collocation points $m_c$ is completely arbitrary.
+When $u^h$ exactly satisfies the PDE at the collocation points, but how well $u^h$ satisfies the PDE for the rest of the domain is up to the basis functions you choose, the location of the collocation points, and the PDE you're solving.
+What we do know is that the more points you have, the more accurate your solution becomes (generally).
+How many points is "good enough" is highly problem dependent and won't be discussed in detail here.
+
+Beyond accuracy though, increasing the number of points also increases the size of your system of equations.
+Depending on your choice of collocation locations and 
+
+
+
+Note we have yet to determine the number of collocation points nor the location of the collocation points.
+
+### How many?
+Choosing the number of collocation points $m_c$ is completely arbitrary.
+When $u^h$ exactly satisfies the PDE at the collocation points, but how well $u^h$ satisfies the PDE for the rest of the domain is up to the basis functions you choose, the location of the collocation points, and the PDE you're solving.
+What we do know is that the more points you have, the more accurate your solution becomes (generally).
+How many points is "good enough" is highly problem dependent and won't be discussed in detail here.
+
+Beyond accuracy though, increasing the number of points also increases the size of your system of equations.
+Depending on your choice of collocation locations and 
+
 

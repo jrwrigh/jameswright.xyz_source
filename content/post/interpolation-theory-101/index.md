@@ -31,7 +31,9 @@ projects: []
 {{< toc >}}
 
 {{% callout note %}}
-Pre-requisites: There are a few assumptions made for the reader's background. Mainly, that you're familiar with the concept of a *basis* in the linear algebra since and, in particular, function space bases (such as the monomials). 
+Pre-requisites: There are a few assumptions made for the reader's background. 
+Mainly, that you're familiar with the concept of a *basis* in the linear algebra sense and, in particular, function space bases (such as the monomials).
+Also, being familiar with turning a system of linear equations into it's equivalent matrix form would be beneficial.
 {{% /callout %}}
 
 ## Interpolation Problem Intro

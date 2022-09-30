@@ -59,6 +59,15 @@ So what about polynomials greater than order $m$? Well, then an infinite number 
 
 We'd like for a solution to the problem to exist ($N \geq m$) and for that solution to be unique ($N < m+1$). Therefore, **the order of the polynomial should be one less than the number of constraints ($N = m$)**.
 
+<details>
+<summary>Alternative Thought Process</summary>
+
+An alternative way of thinking about it is that our constraints setup $m+1$ equations.
+To find a solution, we must have the number of unknowns match the number of equations.
+Since a $N$th order polynomial has $N+1$ unknowns, then $N + 1 = m + 1 \ \rightarrow \ N = m$.
+
+</details>
+
 ## Solving the interpolation problem
 Now we have $m+1$ constraints, and know that $g(x)$ should be a $N = m$ order polynomial. So how do find $g(x)$?
 

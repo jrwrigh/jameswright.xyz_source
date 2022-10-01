@@ -58,8 +58,10 @@ These constraints come in two forms:
 1. Boundary conditions
 2. Satisfying a differential equation
 
-Boundary condition constraints look *identical* to normal interpolation constraints; we prescribe the value of our function (or of the function derivative) at some specific location.
+Boundary condition constraints look *identical* to normal interpolation constraints; we prescribe the value of our function (or of the function derivative) at some specific location.[^2]
 The satisfaction of the differential equation is where things are a bit more interesting.
+
+[^2]: This is true for Dirichlet ($u=g$) and Neumann ($u'=h$) boundary conditions, and any other boundary conditions that specifies a value for the solution function or it's derivative. However, this is not true for other classes of boundary conditions, such as [Robin boundary conditions](https://en.wikipedia.org/wiki/Robin_boundary_condition) ($gu + hu' = a$). For Robin and it's ilk, you would express it as a differential operator acting only on the boundary ($\mathcal{L}(u) = gu + hu' = a$ on the boundary).
 
 ## Collocation for a Generic Differential Equation
 For a given differential equation (DE), assume we can write it in the form:
@@ -339,7 +341,7 @@ All you need to do is solve this matrix equation for the DOFs $c_n$ and then rec
 
 ## Appendix A: Determining Collocation Points Continued
 
-Note we have yet to determine the number of collocation points nor the location of the collocation points.
+Note we have yet to determine the number of collocation points or the location of the collocation points.
 
 ### How many?
 Choosing the number of collocation points $m_c$ is completely arbitrary.
@@ -348,7 +350,7 @@ What we do know is that the more points you have, the more accurate your solutio
 How many points is "good enough" is highly problem dependent.
 
 Beyond accuracy though, increasing the number of points also increases the size of your system of equations.
-Depending on your choice of collocation locations and basis functions, the system of equations you end up with may infeasible to solve.
+Depending on your choice of collocation locations and basis functions, the system of equations you end up with may be infeasible to solve.
 
 ### Where should the collocation points be located?
 

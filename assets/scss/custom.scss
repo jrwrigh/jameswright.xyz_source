@@ -52,3 +52,7 @@ h4:hover a,
 h5:hover a {
   visibility: visible;
 }
+
+.dark .article-style a:not(.nav-link,.hanchor) {
+    text-decoration: underline;
+}

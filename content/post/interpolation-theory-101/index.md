@@ -6,7 +6,7 @@ subtitle: ""
 summary: "A quick overview of the basics of interpolating a set of function points using a polynomial. This servers as a percursor to a (future) post on collocation methods"
 authors: ["James Wright"]
 tags: ["math"]
-categories: []
+categories: ["Notes"]
 date: 2022-09-25T09:47:26-06:00
 lastmod: 2022-09-25T09:47:26-06:00
 featured: false

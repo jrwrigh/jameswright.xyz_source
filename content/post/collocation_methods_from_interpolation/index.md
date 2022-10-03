@@ -6,7 +6,7 @@ subtitle: "or 'Collocation is just Interpolation of Differential Equations'"
 summary: "An introduction to collocation methods for differential equations, from the perspective of interpolation theory. I explain how collocation methods are more-or-less identical to interpolation methods, with the only difference being the constraints applied to the problem."
 authors: ["James Wright"]
 tags: ["math", "differential equations", "numerical methods"]
-categories: []
+categories: ["Notes"]
 date: 2022-09-25T11:34:16-06:00
 lastmod: 2022-09-25T11:34:16-06:00
 featured: false

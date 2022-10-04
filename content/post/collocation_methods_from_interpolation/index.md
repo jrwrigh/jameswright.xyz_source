@@ -75,8 +75,7 @@ In this case, $\mathcal{L}(u) = 2u''' + u'' u$.
 
 The DE is subject to boundary conditions (and/or initial conditions).
 We will assume that the domain of the problem is $x = [0,1]$, and thus the boundaries are at $x=0$ and $x=1$.
-We denote the number of boundary conditions to be $m_b$.
-We will consider two here, though many other are possible.
+We assume two boundary conditions, though generally the number of boundary conditions for a general DE is determined by
 
 {{< math >}}
 $$ 
@@ -183,17 +182,17 @@ We can take the coefficients $c_n$ and move them into a separate vector $c$ and 
 {{< math >}}
 $$
 \begin{bmatrix}
-\phi^1(0) & \phi^1(0) & \cdots & \phi^1(0) \\[8pt]
-\phi_{,x}^1(1) & \phi_{,x}^1(1) & \cdots & \phi_{,x}^1(1) \\[8pt]
-\mathcal{L}(\phi^1(\xi^1)) & \mathcal{L}(\phi^2(\xi^1)) & \cdots & \mathcal{L}(\phi^N(\xi^1)) \\[8pt]
+\phi_0(1) & \phi_1(1) & \cdots & \phi_N(1) \\[8pt]
+\phi'_0(1) & \phi'_1(1) & \cdots & \phi'_N(1) \\[8pt]
+\mathcal{L}(\phi_0(\xi_1)) & \mathcal{L}(\phi_1(\xi_1)) & \cdots & \mathcal{L}(\phi_N(\xi_1)) \\[8pt]
 \vdots  & \vdots  & \ddots & \vdots  \\[8pt]
-\mathcal{L}(\phi^1(\xi^{m_c})) & \mathcal{L}(\phi^2(\xi^{m_c})) & \cdots & \mathcal{L}(\phi^N(\xi^{m_c}))
+\mathcal{L}(\phi_0(\xi_{m_c})) & \mathcal{L}(\phi_1(\xi_{m_c})) & \cdots & \mathcal{L}(\phi_N(\xi_{m_c}))
 \end{bmatrix}
 
 \begin{bmatrix}
+c_0 \\[8pt]
 c_1 \\[8pt]
 c_2 \\[8pt]
-c_3 \\[8pt]
 \vdots  \\[8pt]
 c_N \\[8pt]
 \end{bmatrix}
@@ -202,9 +201,9 @@ c_N \\[8pt]
 \begin{bmatrix}
 a \\[8pt]
 b \\[8pt]
-f(\xi^1) \\[8pt]
+f(\xi_1) \\[8pt]
 \vdots  \\[8pt]
-f(\xi^{m_c}) \\[8pt]
+f(\xi_{m_c}) \\[8pt]
 \end{bmatrix}
 $$
 {{< /math >}}
@@ -226,9 +225,9 @@ $$
 R(u^h) =
 R \left(
 \begin{bmatrix}
+c_0 \\[8pt]
 c_1 \\[8pt]
 c_2 \\[8pt]
-c_3 \\[8pt]
 \vdots  \\[8pt]
 c_N \\[8pt]
 \end{bmatrix}
@@ -236,11 +235,11 @@ c_N \\[8pt]
 = 
 
 \begin{bmatrix}
-\sum_{i=0}^N c_i \phi^i(0) - a \\[8pt]
-\sum_{i=0}^N c_i \phi_{,x}^i(0) -b \\[8pt]
-\mathcal{L}\left(u^h(\xi^1)\right) - f(\xi^1) \\[8pt]
+\sum_{i=0}^N c_i \phi_i(1) - a \\[8pt]
+\sum_{i=0}^N c_i \phi'_i(1) -b \\[8pt]
+\mathcal{L}\left(u^h(\xi_1)\right) - f(\xi_1) \\[8pt]
 \vdots  \\[8pt]
-\mathcal{L}\left(u^h(\xi^{m_c})\right) - f(\xi^{m_c}) \\[8pt]
+\mathcal{L}\left(u^h(\xi_{m_c})\right) - f(\xi_{m_c}) \\[8pt]
 \end{bmatrix}
 $$
 {{< /math >}}
@@ -316,10 +315,10 @@ $$
 \end{bmatrix}
 
 \begin{bmatrix}
+c_0 \\
 c_1 \\
 c_2 \\
 c_3 \\
-c_4 \\
 \vdots  \\
 c_N \\
 \end{bmatrix}

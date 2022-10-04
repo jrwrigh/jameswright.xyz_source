@@ -77,8 +77,8 @@ The most straight forward way is to simply plug the constraints into $g(x)$. Doi
 
 {{< math >}}
 \begin{align*}
-g(x_0) &= c_0  + c_1 x_1 + c_2 x_1^2 + \dots + c_N x_1^{N} &= y_0 \\
-g(x_1) &= c_0  + c_1 x_2 + c_2 x_2^2 + \dots + c_N x_2^{N} &= y_1 \\
+g(x_0) &= c_0  + c_1 x_0 + c_2 x_0^2 + \dots + c_N x_0^{N} &= y_0 \\
+g(x_1) &= c_0  + c_1 x_1 + c_2 x_1^2 + \dots + c_N x_1^{N} &= y_1 \\
 \vdots \\
 g(x_m) &= c_0  + c_1 x_m + c_2 x_m^2 + \dots + c_N x_m^{N} &= y_m \\
 \end{align*}
@@ -121,7 +121,7 @@ In fact, we don't even need $\phi_n(x)$ to be defined by a polynomial.
 For example, we could choose the Fourier series (so $g(x) = c_0 + \sum_{n=1}^N c_n \cos(nx) + s_n \sin(nx)$).
 This is [discussed in more detail below](#appendix-a-further-thoughts-on-non-polynomial-functions).
 
-Regardless of the choice of you basis functions, there's one primary question:
+Regardless of the choice of your basis functions, there's one primary question:
 **How do we go about finding the interpolating function using other bases?**
 
 Answer: We create a different matrix to solve with. 

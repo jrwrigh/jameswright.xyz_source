@@ -77,12 +77,13 @@ subtitle = ""
 
 ## Projects I Maintain
 
-[![jrwrigh/csv2cash - GitHub](https://gh-card.dev/repos/jrwrigh/csv2cash.svg?fullname=)](https://github.com/jrwrigh/csv2cash)
-[![jrwrigh/ansys_cfx - GitHub](https://gh-card.dev/repos/jrwrigh/ansys_cfx.svg?fullname=)](https://github.com/jrwrigh/ansys_cfx)
-[![jrwrigh/cfdpost_colormaps - GitHub](https://gh-card.dev/repos/jrwrigh/cfdpost_colormaps.svg?fullname=)](https://github.com/jrwrigh/cfdpost_colormaps)
-[![jrwrigh/fluent_colormaps - GitHub](https://gh-card.dev/repos/jrwrigh/fluent_colormaps.svg?fullname=)](https://github.com/jrwrigh/fluent_colormaps)
-[![phasta/vtkpytools - GitHub](https://gh-card.dev/repos/phasta/vtkpytools.svg)](https://github.com/phasta/vtkpytools)
+{{< figure src="https://gh-card.dev/repos/ceed/libceed.svg?fullname=" link="https://github.com/ceed/libceed" >}}
+{{< figure src="https://gh-card.dev/repos/jrwrigh/csv2cash.svg?fullname=" link="https://github.com/jrwrigh/csv2cash" >}}
+{{< figure src="https://gh-card.dev/repos/jrwrigh/ansys_cfx.svg?fullname=" link="https://github.com/jrwrigh/ansys_cfx" >}}
+{{< figure src="https://gh-card.dev/repos/jrwrigh/cfdpost_colormaps.svg?fullname=" link="https://github.com/jrwrigh/cfdpost_colormaps" >}}
+{{< figure src="https://gh-card.dev/repos/jrwrigh/fluent_colormaps.svg?fullname=" link="https://github.com/jrwrigh/fluent_colormaps" >}}
+{{< figure src="https://gh-card.dev/repos/phasta/vtkpytools.svg" link="https://github.com/phasta/vtkpytools" >}}
 
 ## Projects I Contribute To
 
-[![pyvista/pyvista - GitHub](https://gh-card.dev/repos/pyvista/pyvista.svg?fullname=)](https://github.com/pyvista/pyvista)
+{{< figure src="https://gh-card.dev/repos/pyvista/pyvista.svg?fullname=" link="https://github.com/pyvista/pyvista" >}}

@@ -78,6 +78,7 @@ subtitle = ""
 ## Projects I Maintain
 
 {{< figure src="https://gh-card.dev/repos/ceed/libceed.svg?fullname=" link="https://github.com/ceed/libceed" >}}
+{{< figure src="https://gh-card.dev/repos/jrwrigh/qtile-mutable-scratch.svg?fullname=" link="https://github.com/jrwrigh/qtile-mutable-scratch" >}}
 {{< figure src="https://gh-card.dev/repos/jrwrigh/csv2cash.svg?fullname=" link="https://github.com/jrwrigh/csv2cash" >}}
 {{< figure src="https://gh-card.dev/repos/jrwrigh/ansys_cfx.svg?fullname=" link="https://github.com/jrwrigh/ansys_cfx" >}}
 {{< figure src="https://gh-card.dev/repos/jrwrigh/cfdpost_colormaps.svg?fullname=" link="https://github.com/jrwrigh/cfdpost_colormaps" >}}

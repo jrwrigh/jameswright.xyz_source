@@ -22,6 +22,7 @@ jobs:
         HUGO_VERSION: 0.101.0
         HUGO_EXTENDED: true
         TARGET_REPO: jrwrigh/jrwrigh.github.io
+        TARGET_BRANCH: master
         TOKEN: ${{ secrets.TOKEN }}
         CNAME: www.jameswright.xyz
         HUGO_ARGS: --debug

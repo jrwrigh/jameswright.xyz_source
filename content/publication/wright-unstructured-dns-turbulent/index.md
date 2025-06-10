@@ -17,8 +17,7 @@ draft: false
 
 projects: []
 publishDate: '2021-01-22T20:56:56.706386Z'
-publication_types:
-- '1'
+publication_types: ['paper-conference']
 abstract: Wall-resolved large eddy simulation (WRLES) is often thought to have mesh
   resolution requirements that grow at the same asymptotic rate as direct numerical
   simulation (DNS), but WRLES actually does grow slower than DNS, even if the near-wall
@@ -38,6 +37,6 @@ abstract: Wall-resolved large eddy simulation (WRLES) is often thought to have m
   wall model\", deficiencies in the standard dynamic sub-grid stress model were identified
   in the outer region of the boundary layer in the Gaussian bump case.
 publication: '*AIAA Scitech 2021 Forum*'
-doi: 10/ghszgc
+doi: 10.2514/6.2021-1746
 ---
 

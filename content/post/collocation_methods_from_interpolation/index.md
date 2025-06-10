@@ -28,8 +28,6 @@ image:
 projects: []
 ---
 
-{{% toc %}}
-
 ## Intro
 Collocation methods are a way of approximately solving differential equations (both partial and ordinary). 
 They are very simple to code and implement.

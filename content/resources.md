@@ -1,16 +1,20 @@
-+++
+---
 # A Projects section created with the Portfolio widget.
-widget = "pages"  # See https://sourcethemes.com/academic/docs/page-builder/
-headless = false  # This file represents a page section.
-active = true  # Activate this widget? true/false
-weight = 65  # Order that this section will appear.
+widget: "pages"  # See https://sourcethemes.com/academic/docs/page-builder/
+headless: false  # This file represents a page section.
+active: true  # Activate this widget? true/false
+weight: 65  # Order that this section will appear.
 
-title = "Resources"
-subtitle = ""
+title: "Resources"
+subtitle: ""
 
-+++
+reading_time: false
+share: false
+show_date: false
+show_related: false
+pager: false
 
-{{% toc %}}
+---
 
 Here are various websites, papers, blog posts, and textbooks that I often
 recommend to people, or find really useful in general.
@@ -58,13 +62,6 @@ The best textbook on *understanding* linear algebra on a fundamental level. The
 proofs throughout the book focus on intuition (by having the determinant
 "banished to the end of the book", in Axler's words). My personal favorite part
 is the fact that it makes firm connections between continuous linear algebra
-and "matrix" algebra.
-
-For student's at Universities, I'd
-check with the library to see if you can get a free pdf copy of the book if
-you're interested. The textbook itself isn't absurdly expensive either ($50-60).
-**Update:** Axler is apparently working on a 4th edition of the book, which he
-plans to be [open access](https://linear.axler.net/Eigenvalues.pdf).
+and "matrix" algebra. The book is [open access](https://linear.axler.net/) and 
 Axler also has [video lectures](https://linear.axler.net/LADRvideos.html) on
-YouTube to go along with the book too.
-
+YouTube to go along with the book.

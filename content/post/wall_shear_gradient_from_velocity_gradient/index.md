@@ -157,7 +157,7 @@ $$\Rightarrow u_k \left [\hat n_j \partial_j (\delta_{ik}) - \hat n_j
 The Kronecker delta is invariant of spacial dimensions, so the left term goes to
 zero. Then we can do product rule again on the right term.
 
-$$\Rightarrow u_k \left [\hat n_j \cancelto{0}{\partial_j (\delta_{ik})} - \hat n_j
+$$\Rightarrow u_k \left [\hat n_j \cancel{\partial_j (\delta_{ik})} - \hat n_j
 \partial_j (\hat n_k \hat n_i)) \right ]$$
 
 $$\Rightarrow -u_k  \left [\hat n_i \hat n_j \partial_j (\hat n_k) + \hat n_k
@@ -169,8 +169,8 @@ n_j \partial_j$ is the gradient in the wall-normal direction. The $\hat n$
 does not change in the wall-normal direction; it only change in the
 wall-parallel direction. Thus:
 
-$$\Rightarrow -u_k  \left [\hat n_i \cancelto{0}{\hat n_j \partial_j (\hat
-n_k)} + \hat n_k \cancelto{0}{\hat n_j \partial_j (\hat n_i)} \right ]$$
+$$\Rightarrow -u_k  \left [\hat n_i \cancel{\hat n_j \partial_j (\hat
+n_k)} + \hat n_k \cancel{\hat n_j \partial_j (\hat n_i)} \right ]$$
 
 $$ \therefore \text{RHT} = 0 $$
 
@@ -178,7 +178,7 @@ Moving back to the original expression, we're then left with:
 
 $$ \partial_{\hat n} u_{i,\parallel} =  (\delta_{ik} - \hat n_k \hat n_i)
 \hat n_j \partial_j (u_k) +
-\cancelto{0}{u_k \hat n_j \partial_j (\delta_{ik} - \hat n_k \hat n_i)}$$
+\cancel{u_k \hat n_j \partial_j (\delta_{ik} - \hat n_k \hat n_i)}$$
 
 Note that we already have the gradient of velocity in the last term, thus:
 

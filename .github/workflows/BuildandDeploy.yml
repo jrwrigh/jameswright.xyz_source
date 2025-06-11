@@ -25,5 +25,5 @@ jobs:
         TARGET_BRANCH: master
         TOKEN: ${{ secrets.TOKEN }}
         CNAME: www.jameswright.xyz
-        HUGO_ARGS: --logLevel debug
+        HUGO_ARGS: --debug
         GO_VERSION: 1.19

@@ -3,6 +3,8 @@ title: Teaching
 summary: My courses
 type: landing
 
+draft: true
+
 cascade:
   - _target:
       kind: page
